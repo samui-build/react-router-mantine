@@ -1,66 +1,58 @@
-import logoDark from "./logo-dark.svg";
-import logoLight from "./logo-light.svg";
-import { Card, Container, Flex, Image, List, Stack, Text } from "@mantine/core";
+import logoDark from './logo-dark.svg'
+import logoLight from './logo-light.svg'
+import { Card, Container, Flex, Image, List, Stack, Text } from '@mantine/core'
 
 export function Welcome() {
   return (
-    <Flex component='main' align='center' justify='center' pt='lg' pb='sm' h='100%'>
-      <Flex direction='column' gap='xl' align='center'>
-        <Flex component='header' direction='column' align='center' gap='lg'>
-          <Container size='xs' p='md'>
-            <Image
-              darkHidden
-              src={logoLight}
-              alt="React Router"
-            />
-            <Image
-              lightHidden
-              src={logoDark}
-              alt="React Router"
-            />
+    <Flex component="main" align="center" justify="center" pt="lg" pb="sm" h="100%">
+      <Flex direction="column" gap="xl" align="center">
+        <Flex component="header" direction="column" align="center" gap="lg">
+          <Container size="xs" p="md">
+            <Image darkHidden src={logoLight} alt="React Router" />
+            <Image lightHidden src={logoDark} alt="React Router" />
           </Container>
         </Flex>
-        <Stack maw={300} w='100%' gap='md' px='md' >
-          <Card component='nav' radius='xl' withBorder>
-              <Stack gap='md'>
-                <Text ta='center' c='dimmed'>
-                  What&apos;s next?
-                </Text>
-                <List listStyleType='none'>
-                  {resources.map(({ href, text, icon }) => (
-                    <List.Item key={href}>
-                      <Flex
-                        component='a'
-                        gap='md'
-                        p='sm'
-                        c='blue'
-                        align='center'
-                        style={{
-                          textDecoration: 'none',
-                          // hover underline?
+        <Stack maw={300} w="100%" gap="md" px="md">
+          <Card component="nav" radius="xl" withBorder>
+            <Stack gap="md">
+              <Text ta="center" c="dimmed">
+                What&apos;s next?
+              </Text>
+              <List listStyleType="none">
+                {resources.map(({ href, text, icon }) => (
+                  <List.Item key={href}>
+                    <Flex
+                      component="a"
+                      gap="md"
+                      p="sm"
+                      c="blue"
+                      align="center"
+                      style={{
+                        textDecoration: 'none',
+                        // hover underline?
                       }}
-                        href={href}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {icon}
-                        {text}
-                      </Flex>
-                    </List.Item>
-                  ))}
-                </List>
-              </Stack>
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {icon}
+                      {text}
+                    </Flex>
+                  </List.Item>
+                ))}
+              </List>
+            </Stack>
           </Card>
         </Stack>
       </Flex>
     </Flex>
-  );
+  )
 }
 
 const resources = [
   {
-    href: "https://reactrouter.com/docs",
-    text: "React Router Docs",
+    href: 'https://reactrouter.com/docs',
+    text: 'React Router Docs',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -79,8 +71,8 @@ const resources = [
     ),
   },
   {
-    href: "https://rmx.as/discord",
-    text: "Join Discord",
+    href: 'https://rmx.as/discord',
+    text: 'Join Discord',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -97,4 +89,4 @@ const resources = [
       </svg>
     ),
   },
-];
+]
