@@ -4,8 +4,10 @@
   "type": "module",
   "scripts": {
     "build": "react-router build",
+    "ci": "pnpm build && pnpm test --run && pnpm typecheck",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
+    "test": "vitest",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
@@ -30,6 +32,7 @@
     "typescript": "^5.8.3",
     "vite": "^7.0.4",
     "vite-plugin-devtools-json": "^0.2.1",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.1.3"
   }
 }
