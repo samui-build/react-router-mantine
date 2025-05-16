@@ -4,8 +4,10 @@
   "type": "module",
   "scripts": {
     "build": "react-router build",
+    "ci": "pnpm build && pnpm test --run && pnpm typecheck",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
+    "test": "vitest",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
@@ -20,15 +22,21 @@
   },
   "devDependencies": {
     "@react-router/dev": "^7.6.3",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^24.0.13",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
+    "jsdom": "^26.1.0",
     "postcss": "^8.5.6",
     "postcss-preset-mantine": "^1.18.0",
     "postcss-simple-vars": "^7.0.1",
     "typescript": "^5.8.3",
     "vite": "^7.0.4",
     "vite-plugin-devtools-json": "^0.2.1",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4"
   }
 }

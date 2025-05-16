@@ -1,3 +1,4 @@
+import React from "react";
 import {
   isRouteErrorResponse,
   Links,
@@ -6,23 +7,23 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-import { Box, Code, ColorSchemeScript, Container, mantineHtmlProps, MantineProvider, Text, Title } from "@mantine/core";
-
+import { Box, Code, ColorSchemeScript, Container, mantineHtmlProps, Text, Title } from "@mantine/core";
 import type { Route } from "./+types/root";
 import "./app.css";
+import { AppTheme } from "~/app-theme";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" {...mantineHtmlProps}>
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <ColorSchemeScript />
         <Meta />
         <Links />
       </head>
       <body>
-        <MantineProvider>{children}</MantineProvider>
+        <AppTheme>{children}</AppTheme>
         <ScrollRestoration />
         <Scripts />
       </body>
