@@ -9,8 +9,19 @@ describe('routes', () => {
     expect(routes).toMatchInlineSnapshot(`
       [
         {
-          "file": "routes/home.tsx",
+          "file": "./features/homepage/homepage-feature.tsx",
           "index": true,
+        },
+        {
+          "children": undefined,
+          "file": "./features/components/components-list-feature.tsx",
+          "index": true,
+          "path": "components",
+        },
+        {
+          "children": undefined,
+          "file": "./features/components/components-detail-feature.tsx",
+          "path": "components/:component",
         },
       ]
     `)
