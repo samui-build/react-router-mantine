@@ -12,8 +12,9 @@ A modern, production-ready template for building full-stack React applications u
 - 🔄 Data loading and mutations
 - 🔒 TypeScript by default
 - 🎉 [Mantine](https://mantine.dev) for styling
-- 📖 [React Router docs](https://reactrouter.com/)
 - 🧰 [Vite Plugin for DevTools Project Settings](https://github.com/ChromeDevTools/vite-plugin-devtools-json)
+- 🧪 GitHub workflow for CI
+- 📖 [React Router docs](https://reactrouter.com/)
 
 ## Getting Started
 
